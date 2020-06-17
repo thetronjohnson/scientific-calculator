@@ -14,7 +14,7 @@ class Calculator(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Calculator")
-        self.setFixedSize(350,300)
+        self.setFixedSize(350,400)
 
         self.generalLayout = QVBoxLayout()
         self._centralWidget = QWidget(self)
@@ -27,7 +27,7 @@ class Calculator(QMainWindow):
     def _createDisplay(self):
         self.display = QLineEdit()
 
-        self.display.setFixedHeight(35)
+        self.display.setFixedHeight(50)
         self.display.setAlignment(Qt.AlignRight)
         self.display.setReadOnly(True)
 
@@ -69,7 +69,7 @@ class Calculator(QMainWindow):
 
         for btn, pos in buttons.items():
             self.buttons[btn] = QPushButton(btn)
-            self.buttons[btn].setFixedSize(60,40)
+            self.buttons[btn].setFixedSize(60,50)
             buttonsLayout.addWidget(self.buttons[btn],pos[0],pos[1])
 
         self.generalLayout.addLayout(buttonsLayout)
